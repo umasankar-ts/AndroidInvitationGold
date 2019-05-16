@@ -5,13 +5,23 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
 
+
+
+
 class MainActivity : AppCompatActivity() {
 
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+
+
+
         when (item.itemId) {
+
             R.id.navigation_home -> {
 
+                val ft = fragmentManager.beginTransaction()
+                ft.replace(R.id.fgmt_main, HomeFragment())
+                ft.commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
@@ -23,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
         }
+
         false
     }
 
