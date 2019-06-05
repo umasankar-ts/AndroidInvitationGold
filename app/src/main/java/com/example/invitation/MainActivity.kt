@@ -4,8 +4,7 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
-
-
+import com.example.invitation.views.fragment.Location
 
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +28,9 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
-
+                val ft = fragmentManager.beginTransaction()
+                ft.replace(R.id.fgmt_main, Location())
+                ft.commit();
                 return@OnNavigationItemSelectedListener true
             }
         }

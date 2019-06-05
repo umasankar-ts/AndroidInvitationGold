@@ -9,4 +9,14 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bride_name">Poornima</string>
+    <string name="weds">Weds</string>
+    <string name="groom_name">Seenivasan</string>
+    <string name="week_day">Friday</string>
+    <string name="marriage_time">"08.00 – 09.30"</string>
+    <string name="marriage_date">"24–05–2020"</string>
+	<string name="fa_regular">fonts/FA-R.otf</string>
+	<string name="fa_light">fonts/FA-L.otf</string>
+	<string name="fa_solid">fonts/FA-S.otf</string>
+	<string name="fa_brand_regular">fonts/FABrand-R .otf</string>
 </resources>
