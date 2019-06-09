@@ -14,9 +14,23 @@
     <string name="groom_name">Seenivasan</string>
     <string name="week_day">Friday</string>
     <string name="marriage_time">"08.00 – 09.30"</string>
-    <string name="marriage_date">"24–05–2020"</string>
+    <string name="marriage_date">"24 Sunday"</string>
+    <string name="marriage_month">"June 2019"</string>
 	<string name="fa_regular">fonts/FA-R.otf</string>
 	<string name="fa_light">fonts/FA-L.otf</string>
 	<string name="fa_solid">fonts/FA-S.otf</string>
 	<string name="fa_brand_regular">fonts/FABrand-R .otf</string>
+	<string name="we_are_no_longer_two">We are no longer two, \n God has joined us together</string>
+	<string name="Days">Days</string>
+	<string name="hours">Hours</string>
+	<string name="minutes">Minutes</string>
+	<string name="seconds">Seconds</string>
+	
+	
+	
+	<!--icons-->
+	<string name="date_icon">&#xf784;</string>
+	<string name="month_icon">&#xf073;</string>
+	<string name="time_icon">&#xf017;</string>
+    <string name="reception">Reception</string>
 </resources>

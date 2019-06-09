@@ -3,4 +3,7 @@
     <color name="colorPrimary">#03A9F4</color>
     <color name="colorPrimaryDark">#00BCD4</color>
     <color name="colorAccent">#D81B60</color>
+    
+    <color name="timer_textview_start_gradient_color">#0023FF</color>
+    <color name="timer_textview_end_gradient_color">#FF005D</color>
 </resources>

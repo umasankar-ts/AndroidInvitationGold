@@ -16,10 +16,24 @@
     </style>
 
 
-    <style name = "headingFont">
+    <style name = "TitleFont">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">10dp</item>
         <item name="android:textSize">20sp</item>
+    </style>
+    
+    <style name = "mediumFont">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <style name = "messageFont">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>
