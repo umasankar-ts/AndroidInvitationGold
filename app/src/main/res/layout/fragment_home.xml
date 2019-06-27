@@ -12,10 +12,10 @@
         <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
                                                      android:layout_height="match_parent">
             
-            <TextView style="@style/mediumFont"
+            <TextView style="@style/messageFont"
                       android:text="@string/we_are_no_longer_two"
                       app:layout_constraintStart_toStartOf="parent"
-                      android:layout_margin="10dp"
+                      android:layout_margin="5dp"
                       android:textAlignment="center"
                       app:layout_constraintTop_toTopOf="parent"
                       android:id="@+id/tv_heading"
@@ -44,7 +44,7 @@
                               android:id="@+id/textView2" />
                     
                     <com.example.invitation.Utils.font_utils.FontTextView style="@style/TitleFont"
-                                                                          android:text="&#xf234;"
+                                                                          android:text="&#xf81b;"
                                                                           app:layout_constraintStart_toStartOf="parent"
                                                                           android:layout_marginStart="8dp"
                                                                           android:layout_marginBottom="8dp"

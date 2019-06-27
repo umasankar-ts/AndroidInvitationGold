@@ -10,6 +10,7 @@ import android.view.ViewGroup
 
 import android.os.CountDownTimer
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
@@ -26,22 +27,23 @@ private const val ARG_PARAM2 = "param2"
  */
 class HomeFragment : Fragment() {
     var countdownTimer:CountDownTimer?=null
+    lateinit var homeFragmentView: View;
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
 
-        val view: View = inflater.inflate(R.layout.fragment_home, container, false)
+        homeFragmentView = inflater.inflate(R.layout.fragment_home, container, false)
         startCountdownTimer()
-        return view
+        return homeFragmentView
     }
 
     private fun startCountdownTimer() {
 
-        val currentMilliSecond: Long = System.currentTimeMillis();
+        val currentMilliSecond: Long = System.currentTimeMillis()
         val sdf = SimpleDateFormat("dd-M-yyyy hh:mm:ss")
-        val dateString = "23-06-2019 09:30:00"
+        val dateString = "23-07-2019 09:30:00"
         val date:Date = sdf.parse(dateString)
         val calendar = Calendar.getInstance()
-        calendar.setTime(date);
+        calendar.time = date
         val millisInfuture:Long =calendar.timeInMillis - currentMilliSecond
 
        countdownTimer = object : CountDownTimer(millisInfuture, 1000) {
@@ -73,15 +75,21 @@ class HomeFragment : Fragment() {
 
             override fun onFinish() {
                 /*            clearing all fields and displaying countdown finished message             */
-
-                tv_day.setText("Count down completed")
-                tv_hour.setText("")
-                tv_minute.setText("")
-                tv_sec.setText("")
+hideHoursMinutsSecondsLayout();
+                homeFragmentView.tv_day.text = "Count down completed"
+                homeFragmentView.tv_hour.text = ""
+                homeFragmentView.tv_minute.text = ""
+                homeFragmentView.tv_sec.text = ""
             }
         }
 
         (countdownTimer as CountDownTimer).start()
+    }
+
+    private fun hideHoursMinutsSecondsLayout() {
+        homeFragmentView.ll_hour.visibility= View.GONE
+        homeFragmentView.ll_minute.visibility= View.GONE
+        homeFragmentView.ll_sec.visibility= View.GONE
     }
 
     override fun onResume() {
