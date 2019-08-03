@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cv_time"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardElevation="1dp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="16dp"
+    >
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        >
+
+            <TextView android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:text="@string/reception"
+                      android:padding="10dp"
+                      android:textAlignment="center"
+                      app:layout_constraintHorizontal_weight="4"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      android:layout_marginEnd="8dp"
+                      app:layout_constraintTop_toTopOf="parent"
+                      android:id="@+id/tv_heading"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintHorizontal_bias="0.5"/>
+
+            <TextView android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:text="@string/marriage_time"
+                      android:padding="10dp"
+                      app:layout_constraintHorizontal_weight="4"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      android:layout_marginEnd="8dp"
+                      app:layout_constraintTop_toBottomOf="@+id/tv_heading"
+                      android:id="@+id/tv_time"
+                      app:layout_constraintStart_toEndOf="@+id/fa_time"
+            />
+
+            <com.example.invitation.Utils.font_utils.FontTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="@string/time_icon"
+                    app:layout_constraintHorizontal_weight="1"
+
+                    android:id="@+id/fa_time"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_time"
+                    app:layout_constraintTop_toTopOf="@+id/tv_time"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_time"
+                    app:layout_constraintHorizontal_bias="0.5"/>
+
+            <TextView android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:text="@string/marriage_week"
+                      android:padding="10dp"
+                      app:layout_constraintHorizontal_weight="4"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      android:layout_marginEnd="8dp"
+                      app:layout_constraintTop_toBottomOf="@+id/tv_time"
+                      app:layout_constraintStart_toEndOf="@+id/fa_week"
+                      android:id="@+id/tv_week"
+
+            />
+
+            <com.example.invitation.Utils.font_utils.FontTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="@string/time_icon"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_week"
+                    android:id="@+id/fa_week"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_time"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_time"
+            />
+
+            <TextView android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:textSize="20sp"
+                      android:text="@string/marriage_date"
+                      android:padding="10dp"
+                      app:layout_constraintHorizontal_weight="4"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      android:layout_marginEnd="8dp"
+                      app:layout_constraintTop_toBottomOf="@+id/tv_week"
+                      app:layout_constraintStart_toEndOf="@+id/fa_week"
+                      android:id="@+id/tv_day"
+
+            />
+
+            <com.example.invitation.Utils.font_utils.FontTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:text="@string/time_icon"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_day"
+                    android:id="@+id/fa_day"
+                    app:layout_constraintTop_toTopOf="@+id/tv_day"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_time"
+            />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

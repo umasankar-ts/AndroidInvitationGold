@@ -26,9 +26,9 @@ private const val ARG_PARAM2 = "param2"
  *
  */
 class HomeFragment : Fragment() {
-    var countdownTimer:CountDownTimer?=null
+    var countdownTimer: CountDownTimer? = null
     lateinit var homeFragmentView: View;
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
 
         homeFragmentView = inflater.inflate(R.layout.fragment_home, container, false)
@@ -40,42 +40,42 @@ class HomeFragment : Fragment() {
 
         val currentMilliSecond: Long = System.currentTimeMillis()
         val sdf = SimpleDateFormat("dd-M-yyyy hh:mm:ss")
-        val dateString = "23-07-2019 09:30:00"
-        val date:Date = sdf.parse(dateString)
+        val dateString = "23-08-2019 09:30:00"
+        val date: Date = sdf.parse(dateString)
         val calendar = Calendar.getInstance()
         calendar.time = date
-        val millisInfuture:Long =calendar.timeInMillis - currentMilliSecond
+        val millisInfuture: Long = calendar.timeInMillis - currentMilliSecond
 
-       countdownTimer = object : CountDownTimer(millisInfuture, 1000) {
+        countdownTimer = object : CountDownTimer(millisInfuture, 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
                 /*            converting the milliseconds into days, hours, minutes and seconds and displaying it in textviews             */
 
-                tv_day.text = (TimeUnit.HOURS.toDays(TimeUnit.MILLISECONDS.toHours(millisUntilFinished))) .toString()
+                tv_day.text = (TimeUnit.HOURS.toDays(TimeUnit.MILLISECONDS.toHours(millisUntilFinished))).toString()
 
                 tv_hour.text = (
                         TimeUnit.MILLISECONDS.toHours(millisUntilFinished) - TimeUnit.DAYS.toHours(
                             TimeUnit.MILLISECONDS.toDays(
                                 millisUntilFinished
                             )
-                        )) .toString()
+                        )).toString()
 
                 tv_minute.text = (
                         TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(
                             TimeUnit.MILLISECONDS.toHours(
                                 millisUntilFinished
                             )
-                        )) .toString()
+                        )).toString()
 
                 tv_sec.text = (
                         TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
                             TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)
-                        )) .toString()
+                        )).toString()
             }
 
             override fun onFinish() {
                 /*            clearing all fields and displaying countdown finished message             */
-hideHoursMinutsSecondsLayout();
+                hideHoursMinutsSecondsLayout();
                 homeFragmentView.tv_day.text = "Count down completed"
                 homeFragmentView.tv_hour.text = ""
                 homeFragmentView.tv_minute.text = ""
@@ -87,9 +87,10 @@ hideHoursMinutsSecondsLayout();
     }
 
     private fun hideHoursMinutsSecondsLayout() {
-        homeFragmentView.ll_hour.visibility= View.GONE
-        homeFragmentView.ll_minute.visibility= View.GONE
-        homeFragmentView.ll_sec.visibility= View.GONE
+        homeFragmentView.ll_hour.visibility = View.GONE
+        homeFragmentView.ll_minute.visibility = View.GONE
+        homeFragmentView.ll_sec.visibility = View.GONE
+        homeFragmentView.tv_label_day.visibility = View.GONE
     }
 
     override fun onResume() {

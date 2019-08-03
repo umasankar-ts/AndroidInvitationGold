@@ -1,427 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".HomeFragment">
-    
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeFragment">
+
+    <TextView
+android:layout_marginTop="25dp"
+            android:id="@+id/tv_heading"
+            android:layout_width="match_parent"
+            style="@style/messageFont"
+
+            android:text="@string/we_are_no_longer_two"
+            android:textAlignment="center"
+            />
+
     <!-- TODO: Update blank fragment layout -->
-    <ScrollView android:layout_width="match_parent"
-                android:layout_height="match_parent">
-        <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
-                                                     android:layout_height="match_parent">
-            
-            <TextView style="@style/messageFont"
-                      android:text="@string/we_are_no_longer_two"
-                      app:layout_constraintStart_toStartOf="parent"
-                      android:layout_margin="5dp"
-                      android:textAlignment="center"
-                      app:layout_constraintTop_toTopOf="parent"
-                      android:id="@+id/tv_heading"
-                      app:layout_constraintEnd_toEndOf="parent" />
-            
-            
-            <android.support.v7.widget.CardView android:layout_margin="10dp"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                app:cardElevation="3dp"
-                                                app:cardCornerRadius="10dp"
-                                                app:layout_constraintTop_toBottomOf="@id/tv_heading"
-                                                app:layout_constraintEnd_toEndOf="parent"
-                                                app:layout_constraintStart_toStartOf="parent"
-                                                android:id="@+id/cardView">
-                
-                <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
-                                                             android:layout_height="200dp">
-                    <TextView style="@style/TitleFont"
-                              android:text="@string/bride_name"
-                    
-                              app:layout_constraintStart_toStartOf="parent"
-                              android:layout_marginStart="8dp"
-                              android:layout_marginTop="8dp"
-                              app:layout_constraintTop_toTopOf="parent"
-                              android:id="@+id/textView2" />
-                    
-                    <com.example.invitation.Utils.font_utils.FontTextView style="@style/TitleFont"
-                                                                          android:text="&#xf81b;"
-                                                                          app:layout_constraintStart_toStartOf="parent"
-                                                                          android:layout_marginStart="8dp"
-                                                                          android:layout_marginBottom="8dp"
-                                                                          app:layout_constraintBottom_toTopOf="@+id/textView"
-                                                                          android:layout_marginTop="8dp"
-                                                                          app:layout_constraintTop_toBottomOf="@+id/textView2"
-                                                                          app:layout_constraintEnd_toEndOf="parent"
-                                                                          android:layout_marginEnd="8dp" />
-                    
-                    <TextView style="@style/TitleFont"
-                              android:text="@string/groom_name"
-                              app:layout_constraintEnd_toEndOf="parent"
-                              android:layout_marginEnd="8dp"
-                              android:layout_marginBottom="8dp"
-                              app:layout_constraintBottom_toBottomOf="parent"
-                              android:id="@+id/textView" />
-                
-                </android.support.constraint.ConstraintLayout>
-            </android.support.v7.widget.CardView>
-            
-            <android.support.v7.widget.CardView android:layout_width="0dp"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginStart="8dp"
-                                                app:layout_constraintTop_toBottomOf="@+id/cardView"
-                                                app:layout_constraintStart_toStartOf="parent"
-                                                android:id="@+id/cardView2"
-                                                android:layout_marginTop="10dp"
-                                                app:layout_constraintHorizontal_bias="0.5"
-                                                app:cardCornerRadius="10dp"
-                                                app:layout_constraintEnd_toStartOf="@+id/cardView3">
-                
-                <LinearLayout android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:orientation="vertical">
-                    
-                    
-                    <TextView style="@style/mediumFont"
-                              android:id="@+id/tv_heading_reception"
-                              android:padding="3dp"
-                              android:layout_gravity="center"
-                              android:text="@string/reception" />
-                    <LinearLayout android:layout_width="match_parent"
-                                  android:layout_height="wrap_content"
-                                  android:weightSum="5"
-                                  android:orientation="horizontal">
-                        <com.example.invitation.Utils.font_utils.FontTextView style="@style/messageFont"
-                                                                              android:id="@+id/tv_icon_marriage_time"
-                                                                              android:padding="3dp"
-                                                                              android:layout_weight="1"
-                                                                              android:text="@string/time_icon"
-                                                                              android:textAlignment="center"
-                                                                              />
-                        
-                        <TextView style="@style/messageFont"
-                                  android:id="@+id/tv_marriage_time"
-                                  android:padding="3dp"
-                                  android:text="@string/marriage_time"
-                                  android:textAlignment="viewStart"
-                                  android:layout_weight="4" />
-                    </LinearLayout>
-                    
-                    <LinearLayout android:layout_width="match_parent"
-                                  android:layout_height="wrap_content"
-                                  android:weightSum="5"
-                                  android:orientation="horizontal">
-                        
-                        
-                        <com.example.invitation.Utils.font_utils.FontTextView style="@style/messageFont"
-                                                                              android:id="@+id/tv_icon_marriage_date"
-                                                                              android:padding="3dp"
-                                                                              android:textAlignment="center"
-                                                                              android:layout_weight="1"
-                                                                              android:text="@string/time_icon"
-                        />
-                        
-                        <TextView style="@style/messageFont"
-                                  android:id="@+id/tv_marriage_date"
-                                  android:padding="3dp"
-                                  android:text="@string/marriage_date"
-                                  android:textAlignment="viewStart"
-                                  android:layout_weight="4"
-                                   />
-                    </LinearLayout>
-                    
-                    <LinearLayout android:layout_width="match_parent"
-                                  android:layout_height="wrap_content"
-                                  android:weightSum="5"
-                                  android:orientation="horizontal">
-                        
-                        <com.example.invitation.Utils.font_utils.FontTextView style="@style/messageFont"
-                                                                              android:id="@+id/tv_icon_marriage_month"
-                                                                              android:padding="3dp"
-                                                                              android:textAlignment="center"
-                                                                              android:layout_weight="1"
-                                                                              android:text="@string/month_icon"
-                        />
-                        
-                        <TextView style="@style/messageFont"
-                                  android:id="@+id/tv_marriage_month"
-                                  android:padding="3dp"
-                                  android:text="@string/marriage_month"
-                                  android:textAlignment="viewStart"
-                                  android:layout_weight="4" />
-                    
-                    </LinearLayout>
-                </LinearLayout>
-            
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView android:layout_width="0dp"
-                                                android:layout_height="100dp"
-                                                app:layout_constraintTop_toBottomOf="@+id/cardView"
-                                                app:layout_constraintEnd_toEndOf="parent"
-                                                android:layout_marginEnd="8dp"
-                                                app:layout_constraintStart_toEndOf="@+id/cardView2"
-                                                android:layout_marginStart="8dp"
-                                                android:layout_marginTop="10dp"
-                                                android:id="@+id/cardView3"
-                                                app:cardCornerRadius="10dp"
-                                                app:layout_constraintHorizontal_bias="0.5">
-                <android.support.constraint.ConstraintLayout android:layout_width="wrap_content"
-                                                             android:layout_height="wrap_content">
-                
-                
-                </android.support.constraint.ConstraintLayout>
-            
-            </android.support.v7.widget.CardView>
-            
-            <android.support.v7.widget.CardView android:layout_width="0dp"
-                                                android:layout_height="100dp"
-                                                app:layout_constraintEnd_toEndOf="parent"
-                                                android:layout_marginEnd="8dp"
-                                                android:id="@+id/cardView4"
-                                                app:layout_constraintStart_toStartOf="parent"
-                                                android:layout_marginStart="8dp"
-                                                android:layout_marginTop="8dp"
-                                                app:layout_constraintTop_toBottomOf="@+id/cardView2">
-                
-                <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
-                                                             android:layout_height="wrap_content">
-                    
-                    <LinearLayout android:layout_width="0dp"
-                                  android:layout_height="wrap_content"
-                                  android:id="@+id/ll_day"
-                                  android:orientation="vertical"
-                                  app:layout_constraintStart_toStartOf="parent"
-                                  app:layout_constraintHorizontal_bias="0.5"
-                                  app:layout_constraintEnd_toStartOf="@+id/ll_hour"
-                                  app:layout_constraintTop_toTopOf="parent"
-                                  app:layout_constraintBottom_toBottomOf="parent">
-                        <com.example.invitation.view_utills.GradientTextView android:layout_width="match_parent"
-                                                                             android:layout_height="wrap_content"
-                                                                             android:id="@+id/tv_day"
-                                                                             android:textSize="40sp"
-                                                                             android:textAlignment="center"
-                        
-                        />
-                        <TextView android:layout_width="match_parent"
-                                  android:layout_height="wrap_content"
-                                  android:id="@+id/tv_label_day"
-                                  android:text="@string/Days"
-                                  android:textAlignment="center"
-                                  android:textSize="15sp"
-                        
-                        />
-                    </LinearLayout>
-                    
-                    <LinearLayout android:layout_width="0dp"
-                                  android:layout_height="wrap_content"
-                                  android:id="@+id/ll_hour"
-                                  android:orientation="vertical"
-                                  app:layout_constraintStart_toEndOf="@+id/ll_day"
-                                  app:layout_constraintHorizontal_bias="0.5"
-                                  app:layout_constraintEnd_toStartOf="@+id/ll_minute"
-                                  app:layout_constraintTop_toTopOf="parent"
-                                  app:layout_constraintBottom_toBottomOf="parent">
-                        
-                        <com.example.invitation.view_utills.GradientTextView android:layout_width="match_parent"
-                                                                             android:layout_height="wrap_content"
-                                                                             android:id="@+id/tv_hour"
-                                                                             android:textAlignment="center"
-                                                                             android:textSize="40sp" />
-                        
-                        <TextView android:layout_width="match_parent"
-                                  android:layout_height="wrap_content"
-                                  android:id="@+id/tv_label_hour"
-                                  android:text="@string/hours"
-                                  android:textAlignment="center"
-                                  android:textSize="15sp"
-                        
-                        />
-                    </LinearLayout>
-                    
-                    <LinearLayout android:layout_width="0dp"
-                                  android:layout_height="wrap_content"
-                                  android:id="@+id/ll_minute"
-                                  android:orientation="vertical"
-                                  app:layout_constraintStart_toEndOf="@+id/ll_hour"
-                                  app:layout_constraintHorizontal_bias="0.5"
-                                  app:layout_constraintEnd_toStartOf="@+id/ll_sec"
-                                  app:layout_constraintTop_toTopOf="parent"
-                                  app:layout_constraintBottom_toBottomOf="parent">
-                        
-                        <com.example.invitation.view_utills.GradientTextView android:layout_width="match_parent"
-                                                                             android:layout_height="wrap_content"
-                                                                             android:id="@+id/tv_minute"
-                                                                             android:textAlignment="center"
-                                                                             android:textSize="40sp" />
-                        
-                        <TextView android:layout_width="match_parent"
-                                  android:layout_height="wrap_content"
-                                  android:id="@+id/tv_label_minute"
-                                  android:text="@string/minutes"
-                                  android:textAlignment="center"
-                                  android:textSize="15sp"
-                        
-                        />
-                    </LinearLayout>
-                    
-                    <LinearLayout android:layout_width="0dp"
-                                  android:layout_height="wrap_content"
-                                  android:id="@+id/ll_sec"
-                                  android:orientation="vertical"
-                                  app:layout_constraintStart_toEndOf="@+id/ll_minute"
-                                  app:layout_constraintHorizontal_bias="0.5"
-                                  app:layout_constraintEnd_toEndOf="parent"
-                                  app:layout_constraintTop_toTopOf="parent"
-                                  app:layout_constraintBottom_toBottomOf="parent">
-                        
-                        <com.example.invitation.view_utills.GradientTextView android:layout_width="match_parent"
-                                                                             android:layout_height="wrap_content"
-                                                                             android:id="@+id/tv_sec"
-                                                                             android:textSize="40sp"
-                                                                             android:textAlignment="center" />
-                        
-                        <TextView android:layout_width="match_parent"
-                                  android:layout_height="wrap_content"
-                                  android:id="@+id/tv_label_sec"
-                                  android:text="@string/seconds"
-                                  android:textAlignment="center"
-                                  android:textSize="15sp"
-                        
-                        />
-                    
-                    </LinearLayout>
-                </android.support.constraint.ConstraintLayout>
-            
-            </android.support.v7.widget.CardView>
-            
-            <!--<android.support.v7.widget.CardView
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+
+            <android.support.v7.widget.CardView
+                    android:layout_marginTop="80dp"
+                    android:id="@+id/cv_wedding_couples"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/cv_time"
-                    app:layout_constraintTop_toBottomOf="@+id/cardView"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:cardElevation="1dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="30dp"
                     app:cardCornerRadius="10dp"
-                    android:layout_margin="16dp"
-            >
+                    app:cardElevation="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+
+                        android:layout_height="200dp">
+                    <TextView
+                            android:id="@+id/textView2"
+                            style="@style/TitleFont"
+
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/bride_name"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                    <com.example.invitation.Utils.font_utils.FontTextView
+                            style="@style/TitleFont"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="&#xf81b;"
+                            app:layout_constraintBottom_toTopOf="@+id/textView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+
+                    <TextView
+                            android:id="@+id/textView"
+                            style="@style/TitleFont"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/groom_name"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                    android:id="@+id/cardView4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/cv_wedding_couples">
+
                 <android.support.constraint.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                >
-    
-                    <TextView android:layout_width="0dp"
-                              android:layout_height="wrap_content"
-                              android:textSize="20sp"
-                              android:text="@string/marriage_time"
-                              android:padding="10dp"
-                              app:layout_constraintHorizontal_weight="4"
-                              app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                              app:layout_constraintBottom_toBottomOf="parent"
-                              android:id="@+id/tv_time" app:layout_constraintStart_toEndOf="@+id/vu_time"
-                              app:layout_constraintHorizontal_bias="0.5"/>
-    
-                    <TextView android:layout_width="0dp"
-                              android:layout_height="wrap_content"
-                              android:background="#00FFD7"
-                              android:textSize="20sp"
-                              android:padding="10dp"
-                              app:layout_constraintHorizontal_weight="1"
-                              app:layout_constraintBottom_toBottomOf="parent"
-                              android:id="@+id/vu_time" app:layout_constraintStart_toStartOf="parent"
-                              app:layout_constraintEnd_toStartOf="@+id/tv_time"
-                              app:layout_constraintTop_toTopOf="parent"
-                              app:layout_constraintHorizontal_bias="0.5"/>
-    
+                        android:padding="5dp"
+                        android:visibility="visible">
+
+                    <LinearLayout
+                            android:id="@+id/ll_day"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/ll_hour"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+                        <com.example.invitation.view_utills.GradientTextView
+                                android:id="@+id/tv_day"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:textSize="40sp"
+
+                        />
+                        <TextView
+                                android:id="@+id/tv_label_day"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Days"
+                                android:textAlignment="center"
+                                android:textSize="15sp"
+
+                        />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:id="@+id/ll_hour"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/ll_minute"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/ll_day"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        <com.example.invitation.view_utills.GradientTextView
+                                android:id="@+id/tv_hour"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:textSize="40sp"/>
+
+                        <TextView
+                                android:id="@+id/tv_label_hour"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/hours"
+                                android:textAlignment="center"
+                                android:textSize="15sp"
+
+                        />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:id="@+id/ll_minute"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/ll_sec"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/ll_hour"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        <com.example.invitation.view_utills.GradientTextView
+                                android:id="@+id/tv_minute"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:textSize="40sp"/>
+
+                        <TextView
+                                android:id="@+id/tv_label_minute"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/minutes"
+                                android:textAlignment="center"
+                                android:textSize="15sp"
+
+                        />
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:id="@+id/ll_sec"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/ll_minute"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        <com.example.invitation.view_utills.GradientTextView
+                                android:id="@+id/tv_sec"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:textSize="40sp"/>
+
+                        <TextView
+                                android:id="@+id/tv_label_sec"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/seconds"
+                                android:textAlignment="center"
+                                android:textSize="15sp"
+
+                        />
+
+                    </LinearLayout>
                 </android.support.constraint.ConstraintLayout>
-    
-    
-            </android.support.v7.widget.CardView>-->
-            
-            <!-- <android.support.v7.widget.CardView
-                     android:layout_width="match_parent"
-                     android:layout_height="wrap_content"
-    
-                     app:layout_constraintTop_toBottomOf="@+id/cv_time"
-                     app:layout_constraintEnd_toEndOf="parent"
-                     app:cardElevation="2dp"
-                     app:cardCornerRadius="10dp"
-                     android:layout_margin="16dp"
-                     android:id="@+id/cv_week"
-             >
-                 <android.support.constraint.ConstraintLayout
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                 >
-    
-                     <TextView android:layout_width="0dp"
-                               android:layout_height="wrap_content"
-                               android:textSize="20sp"
-                               android:text="@string/week_day"
-                               android:padding="10dp"
-                               app:layout_constraintHorizontal_weight="4"
-                               app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                               app:layout_constraintBottom_toBottomOf="parent"
-                               android:id="@+id/tv_week" app:layout_constraintStart_toEndOf="@+id/tv_week_back"
-                               app:layout_constraintHorizontal_bias="0.5"/>
-    
-                     <TextView android:layout_width="0dp"
-                               android:layout_height="wrap_content"
-                               android:background="#00FFD7"
-                               android:textSize="20sp"
-                               app:layout_constraintHorizontal_weight="1"
-                               app:layout_constraintBottom_toBottomOf="parent"
-                               android:id="@+id/tv_week_back" app:layout_constraintStart_toStartOf="parent"
-                               app:layout_constraintEnd_toStartOf="@+id/tv_week"
-                               app:layout_constraintTop_toTopOf="parent"
-                               app:layout_constraintHorizontal_bias="0.5"/>
-    
-                 </android.support.constraint.ConstraintLayout>
-    
-    
-             </android.support.v7.widget.CardView>
-    
-             <android.support.v7.widget.CardView
-                     android:layout_width="match_parent"
-                     android:layout_height="wrap_content"
-    
-                     app:layout_constraintTop_toBottomOf="@+id/cv_week"
-                     app:layout_constraintEnd_toEndOf="parent"
-                     app:cardElevation="3dp"
-                     app:cardCornerRadius="10dp"
-                     android:layout_margin="16dp"
-             >
-                 <android.support.constraint.ConstraintLayout
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                 >
-    
-                     <TextView android:layout_width="0dp"
-                               android:layout_height="wrap_content"
-                               android:textSize="20sp"
-                               android:text="@string/marriage_date"
-                               android:padding="10dp"
-                               app:layout_constraintHorizontal_weight="4"
-                               app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                               app:layout_constraintBottom_toBottomOf="parent"
-                               android:id="@+id/tv_date" app:layout_constraintStart_toEndOf="@+id/tv_date_back"
-                               app:layout_constraintHorizontal_bias="0.5"/>
-    
-                     <TextView android:layout_width="0dp"
-                               android:layout_height="wrap_content"
-                               android:background="#00FFD7"
-                               android:textSize="20sp"
-                               app:layout_constraintHorizontal_weight="1"
-                               app:layout_constraintBottom_toBottomOf="parent"
-                               android:id="@+id/tv_date_back" app:layout_constraintStart_toStartOf="parent"
-                               app:layout_constraintEnd_toStartOf="@+id/tv_date"
-                               app:layout_constraintTop_toTopOf="parent"
-                               app:layout_constraintHorizontal_bias="0.5"/>
-    
-                 </android.support.constraint.ConstraintLayout>
-    
-    
-             </android.support.v7.widget.CardView>-->
-        
-        
+
+            </android.support.v7.widget.CardView>
+
+            <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    layout="@layout/view_reception_details"
+                    android:id="@+id/inc_reception"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView4"
+                    />
+
+
+            <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    layout="@layout/view_reception_details"
+
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/inc_reception"
+            />
+
+
+
+
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 
