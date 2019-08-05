@@ -1,5 +1,6 @@
 package com.example.invitation
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.widget.TextView
+import com.example.invitation.views.EndActivity
 import com.example.invitation.views.fragment.Location
 
 
@@ -57,5 +59,11 @@ class MainActivity : AppCompatActivity() {
 
 
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+    }
+
+    override fun onBackPressed() {
+
+        startActivity(Intent(this, EndActivity::class.java))
+        this.finish();
     }
 }
