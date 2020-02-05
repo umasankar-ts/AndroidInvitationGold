@@ -8,6 +8,20 @@
         tools:context=".views.EndActivity"
         >
 
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/endlayout_image"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/app_name"
+            android:id="@+id/imageView"
+            />
+
     <com.example.invitation.view_utills.GradientTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,28 +40,51 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="@string/save_the_dates"
             android:textSize="20sp"
-
             app:layout_constraintStart_toStartOf="@+id/gradientTextView"
-
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/gradientTextView"
             android:layout_marginStart="8dp"
             app:layout_constraintEnd_toEndOf="@+id/gradientTextView"
+            android:id="@+id/textView3"
             />
 
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:src="@drawable/endlayout_image"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/gradientTextView"
+            app:layout_constraintEnd_toEndOf="@+id/gradientTextView"
+            app:layout_constraintStart_toStartOf="@+id/gradientTextView"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            >
 
-            app:layout_constraintStart_toStartOf="parent"
-            android:contentDescription="@string/app_name"
-            android:id="@+id/imageView"
-            />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bride_name"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:text="@string/weds"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/groom_name"
+                android:layout_gravity="end"
+                />
+
+
+    </LinearLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>
